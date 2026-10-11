@@ -1,0 +1,23 @@
+# Render blueprint: New > Blueprint, point at this repo.
+services:
+  - type: web
+    name: momentum-india
+    runtime: node
+    plan: starter            # persistent disks need a paid plan
+    region: singapore
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATA_DIR
+        value: /var/data
+      - key: SITE_URL
+        sync: false          # e.g. https://momentumindia.in
+      - key: ADMIN_TOKEN
+        generateValue: true  # copy it from the Render dashboard to sign in at /admin
+    disk:
+      name: momentum-data
+      mountPath: /var/data
+      sizeGB: 1

@@ -1,0 +1,8 @@
+{
+  "medals": [
+    { "games": "apg2026", "date": "2026-10-19", "medal": "G", "athlete": "Example Athlete", "sport": "Para athletics", "event": "Men's javelin F64", "state": "Haryana", "link": "https://example.com/result" }
+  ],
+  "fixtures": [
+    { "league": "isl", "date": "2026-10-10", "time": "17:00", "home": "Bengaluru FC", "away": "Sporting Club Delhi", "venue": "Kanteerava Stadium, Bengaluru", "home_score": 2, "away_score": 1, "status": "final" }
+  ]
+}
